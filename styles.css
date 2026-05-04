@@ -1,0 +1,46 @@
+.clock {
+  width: 200px;
+  height: 200px;
+  border: 5px solid black;
+  border-radius: 50%;
+  position: relative;
+}
+
+/* MARKERS */
+.mark {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform-origin: center 100px;
+  background: black;
+}
+
+/* Minute ticks */
+.mark {
+  width: 1px;
+  height: 6px;
+  opacity: 0.6;
+}
+
+/* Hour ticks (every 5th) */
+.mark.hour-mark {
+  height: 12px;
+  width: 2px;
+  opacity: 1;
+}
+
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+}
+
+.hour { height: 50px; width: 4px; background: black; }
+.minute { height: 70px; width: 3px; background: black; }
+.second { height: 90px; width: 2px; background: red; }
+
+.hour, .minute {
+  transform-origin: bottom center;
+  will-change: transform;
+}
